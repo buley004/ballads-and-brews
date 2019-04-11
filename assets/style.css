@@ -1,13 +1,21 @@
 body{
-    background: rgb(230, 230, 230);
+    background: rgb(37, 12, 12);
 }
 
 .jumbotron{
     background-image: url("../assets/img/newBackground.png");
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+label{
+    color: whitesmoke;
+}
+
+.form-control{
+    background-color: rgb(41, 35, 35);
+    color: whitesmoke;
     
-  
 }
 
 .jumbotron,h1{
@@ -19,6 +27,35 @@ body{
     text-align: left;
     color: black;
 }
+
+#submitBTN{
+    height: 205px;
+    width: 205px;
+    margin-left: 35%;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+#submitBTN:hover{
+box-shadow: 5px,5px,5px,0px;
+cursor: pointer;
+}
+
+#submitBTN:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+
+  
+
+
+
+
+
+.container{
+    background-color:  rgb(41, 35, 35);
+}
 .card{
-    margin-right: 40px;
+    margin-right: 50px;
 }
