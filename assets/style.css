@@ -5,9 +5,7 @@ body{
 .jumbotron{
     background-image: url("../assets/img/newBackground.png");
     background-size: cover;
-    background-repeat: no-repeat;
-    
-  
+    background-repeat: no-repeat;     
 }
 
 .jumbotron,h1{
@@ -19,6 +17,7 @@ body{
     text-align: left;
     color: black;
 }
+
 .card{
     margin-right: 40px;
 }
