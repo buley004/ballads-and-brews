@@ -18,20 +18,35 @@
             <h1 class="display-4">Ballads and Brews</h1>
             <p class="lead">What's your plan for the night? </p>
             <hr class="my-4">
-            <p>Let's go to a show and get some brews.</p>    
+            <p>Let's go to a show and get some brews.</p>
         </div>
     
 
     <div class="container">
         <form>
             <div class="form-group">
-                <label for="exampleFormControlInput1">Location</label>
+                <label for="exampleFormControlInput1">
+                    <h3>Location</h3>
+                </label>
                 <input type="text" class="form-control" id="location" placeholder="Where you at?">
             </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Genre</label>
-                <input type="text" class="form-control" id="musicGenre"
-                    placeholder="What kind of music do you like?">
+            <div class="music">
+                <h3 id="music">Music</h3>
+
+                <form action="/action_page.php" class="checkboxes">
+                    <input type="checkbox" name="genre1" value="alt"> Alternative<br>
+                    <input type="checkbox" name="genre2" value="blues"> Blues<br>
+                    <input type="checkbox" name="genre3" value="classical"> Classical<br>
+                    <input type="checkbox" name="genre4" value="country"> Country<br>
+                    <input type="checkbox" name="genre5" value="pop"> Pop<br>
+                    <input type="checkbox" name="genre6" value="edm"> EDM<br>
+                    <input type="checkbox" name="genre7" value="folk"> Folk<br>
+                    <input type="checkbox" name="genre8" value="hip-hop"> Hip-Hop<br>
+                    <input type="checkbox" name="genre9" value="indie"> Indie<br>
+                    <input type="checkbox" name="genre10" value="metal"> Metal<br>
+                    <input type="checkbox" name="genre11" value="rock"> Rock<br>
+                    <input type="submit" value="Submit">
+                </form>
             </div>
         </form>
     </div>
@@ -45,37 +60,33 @@
 <br>
     <div class="container">
         <div class="row">
-        <div class="col-md-1"></div>
-        <div class="card" style="width: 26rem;">
-            <div class="card-body">
-                <h5 class="card-title">Concerts</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Concerts we found!</h6>
-                <p class="card-text">Some quick text from what will be returned from out API</p>
-                <a href="#" class="card-link">Card link</a>        
+            <div class="col-md-1"></div>
+            <div class="card" style="width: 30rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Concerts</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concerts we found!</h6>
+                    <p class="card-text">Some quick text from what will be returned from out API</p>
+                    <a href="#" class="card-link">Card link</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="card" style="width: 30rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Bars and Restaraunts</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Drinks and food we found!</h6>
+                        <p class="card-text">Some quick text from what will be returned from out API</p>
+                        <a href="#" class="card-link">Card link</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row">
-    <div class="col-md-1"></div>
-    <div class="card" style="width: 26rem;">
-        <div class="card-body">
-            <h5 class="card-title">Bars and Restaraunts</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Drinks and food we found!</h6>
-            <p class="card-text">Some quick text from what will be returned from out API</p>
-            <a href="#" class="card-link">Card link</a>    
-        </div>
-    </div>
     </div>
 
-    <br>
-    <br>
-
-</div>
-</div>
-</div>
-    
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="assets/app.js"></script>
+    <script src="assests/app.js"></script>
+
 </body>
 
 </html>
