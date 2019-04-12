@@ -1,8 +1,9 @@
 var eventKey = 'ZAZTJGCB3OHOQ3RBOEAC';
 var eventAddress = $('#exampleFormControlInput1').val();
 var eventUrl = 'https://www.eventbriteapi.com/v3/subcategories/?token=' + eventKey + '&id=103&location.address=' + eventAddress;
+var selectedGenres = [];
 
-$(document).ready(function() {
+$(document).ready(function () {
     $.ajax({
         url: eventUrl,
         method: 'GET'
@@ -10,11 +11,24 @@ $(document).ready(function() {
         console.log(response);
         console.log(response.subcategories[0]);
         for (let i = 0; i < response.subcategories.length; i++) {
-            if(response.subcategories[i].parent_category.id==103)
-            console.log(response.subcategories[i].name + " " + response.subcategories[i].id);  
+            if (response.subcategories[i].parent_category.id == 103)
+                console.log(response.subcategories[i].name + " " + response.subcategories[i].id);
         }
     });
-}); 
+});
+
+//function to get subgenre ids from checkboxes and pass to eventbrite api
+$('#music-types').submit(function () {
+    event.preventDefault();
+    
+    //add checked genres to an array with eventbrite subgenres
+    $.each($("input[name='genre']:checked"), function () {
+        selectedGenres.push($(this).attr('data-sub'));
+    });
+    console.log(selectedGenres);
+    
+
+});
 
 function restaurantDisplay() {
 
@@ -28,13 +42,13 @@ function restaurantDisplay() {
 
     // Creates AJAX call for the specific city
     $.ajax({
-      url: queryURL,
-      method: "GET"
-    }).then(function(response) {
+        url: queryURL,
+        method: "GET"
+    }).then(function (response) {
 
-      var results = response.data;
-      console.log(results);
+        var results = response.data;
+        console.log(results);
 
     });
 
-  }
+}
