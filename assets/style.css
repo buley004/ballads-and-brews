@@ -1,21 +1,12 @@
 body{
     background: rgb(37, 12, 12);
+    color: whitesmoke;
 }
 
 .jumbotron{
     background-image: url("../assets/img/newBackground.png");
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-label{
-    color: whitesmoke;
-}
-
-.form-control{
-    background-color: rgb(41, 35, 35);
-    color: whitesmoke;
-    
 }
 
 .jumbotron,h1{
@@ -28,10 +19,30 @@ label{
     color: black;
 }
 
+label{
+    color: whitesmoke;
+}
+
+.music{
+    margin-left: 32%;
+}
+
+.form-control{
+    background-color: rgb(41, 35, 35);
+    color: whitesmoke;
+    
+}
+
+
+h6{
+text-align: center;
+
+}
+
 #submitBTN{
     height: 205px;
     width: 205px;
-    margin-left: 35%;
+    margin-left: 41%;
     border-radius: 15px;
     box-shadow: 0 9px #999;
 }
@@ -47,15 +58,11 @@ cursor: pointer;
 }
 
 
-  
-
-
-
-
-
 .container{
     background-color:  rgb(41, 35, 35);
 }
 .card{
-    margin-right: 50px;
+    margin-right:  10%;
+   margin-left: 1%;
+
 }
