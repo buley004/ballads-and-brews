@@ -3,7 +3,7 @@ var long;
 var restCode;
 var eventKey = 'ZAZTJGCB3OHOQ3RBOEAC';
 var eventAddress;
-var eventUrl = 'https://www.eventbriteapi.com/v3/events/search/?start_date.keyword=today&token=' + eventKey;
+var eventUrl = 'https://www.eventbriteapi.com/v3/events/search/?start_date.keyword=today&expand=venue&token=' + eventKey;
 var selectedGenres = [];
 
 var prevScrollpos = window.pageYOffset;
@@ -53,7 +53,13 @@ $('#submitBTN').on('click', function () {
 
         for (let i = 0; i < response.events.length; i++) {
             
-            var concertDiv = $('<div>').text(response.events[i].name.text);
+            var concertDiv = $('<div>');
+            var eventName = $('<div>')
+            var eventA = $(`<a href="${response.events[i].url}">${response.events[i].name.text}</a>`)
+            eventName.append(eventA)
+
+            var venue = $(`<p>${response.events[i].venue.name}</p>`)
+            concertDiv.append(eventName).append(venue);
             
             //add div
             $('#concerts-display').append(concertDiv);
