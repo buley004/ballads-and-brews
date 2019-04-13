@@ -54,11 +54,11 @@ $('#submitBTN').on('click', function () {
         for (let i = 0; i < response.events.length; i++) {
             
             var concertDiv = $('<div>');
-            var eventName = $('<div>')
-            var eventA = $(`<a href="${response.events[i].url}">${response.events[i].name.text}</a>`)
-            eventName.append(eventA)
+            var eventName = $('<div>');
+            var eventA = $(`<a href="${response.events[i].url}">${response.events[i].name.text}</a>`);
+            eventName.append(eventA);
 
-            var venue = $(`<p>${response.events[i].venue.name}</p>`)
+            var venue = $(`<p>${response.events[i].venue.name}</p>`);
             concertDiv.append(eventName).append(venue);
             
             //add div
