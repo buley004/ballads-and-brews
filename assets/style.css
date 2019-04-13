@@ -3,7 +3,9 @@ html {
 }
 
 body {
-    background: rgb(37, 12, 12);
+    
+    background-image: url("../assets/img/light_honeycomb.png");
+    background-repeat: repeat;
     color: whitesmoke;
 }
 
@@ -37,9 +39,8 @@ body {
 }
 
 .jumbotron {
-    /* background-image: url("../assets/img/newBackground.png");
-    background-size: cover;
-    background-repeat: no-repeat; */
+ 
+  
 }
 
 .parallax {
@@ -100,7 +101,9 @@ h6 {
 }
 
 .container {
-    background-color: rgb(41, 35, 35);
+    background-color: #333;
+    background-image: url("../assets/img/dark-honeycomb.png");
+    background-repeat: repeat;
 }
 
 .card {
