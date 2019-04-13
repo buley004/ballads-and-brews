@@ -17,10 +17,7 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 }
 
-
-
 $('#submitBTN').on('click', function () {
-
 
     console.log('sup');
 
@@ -57,12 +54,11 @@ $('#submitBTN').on('click', function () {
             
             //add div
             $('#concerts-display').append(concertDiv);
+            // clearing display text
+            $("#displayCon").text("");
         }
-        
-
     })
 });
-
 
 
 // when clicking submit picture, run this API call
@@ -117,12 +113,15 @@ $("#submitBTN").on("click", function () {
         method: "GET"
       }).then(function (response) {
 
-        console.log(response.name);
+        console.log(response);
 
         //for (var j = 0; j < response.restaurants.length; j++) {
 
           // printing name to HTML
           $("#card-food").append(response.name);
+          $("#card-food").append(response.url);
+          // clearing display text
+          $("#displayRest").text("");
 
        // };
       });
