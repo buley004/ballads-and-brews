@@ -9,16 +9,22 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="../Group-Project/assets/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/style.css">
 </head>
+<link href='https://fonts.googleapis.com/css?family=Arbutus' rel='stylesheet'>
+<style>
+body {
+    font-family: 'Arbutus';font-size: 22px;
+}
+</style>
 
 <body>
     <!-- nav bar -->
     <nav id="navbar">
         <a href="#section-1">Home</a></li>
-        <a href="#section-2">Location/Music</a></li>
-        <a href="#section-3">Submit</a></li>
-        <a href="#section-4">Results</a></li>
+        <a href="#section-2">Where are you? </a></li>
+        <a href="#section-3">Searching...</a></li>
+        <a href="#section-4">Your planned night!</a></li>
     </nav>
     <!-- scrolling image -->
     <div class="parallax"></div>
@@ -103,44 +109,41 @@
                                         <input type="checkbox" name="genre" data-sub="3015" value="reggae"> Reggae<br>
                                     </div>
                                 </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </form>
+                        </div>
+                </form>
+            </div>
+        </div>
+        </form>
 
         <br>
         <br>
+
         <div id="section-3">
-            <h6>Click on image to get your results</h6>
+            <h6>Click to get your results:</h6>
             <br>
             <img id="submitBTN" src="../Group-Project/assets/img/BandBrew (1).png" alt="beer and music note image">
         </div>
+
         <br>
         <br>
         <br>
+        
         <div class="container">
             <div class="row">
-                <div class="col-md-1"></div>
+                <div class="col-md-12"></div>
                 <div class="card" style="width: 25rem;">
-                    <div class="card-body" id="concerts-display">
+                    <div class="card-body">
                         <h5 class="card-title">Concerts</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Concerts we found!</h6>
-                        <p class="card-text">Some quick text from what will be returned from out API</p>
-                        <a href="#" class="card-link">Card link</a>
+                        <h6 class="card-subtitle mb-2 text-muted" id="displayCon">Concerts we found!</h6>
+                        <p class="card-text" id="concerts-display"></p>
                     </div>
                 </div>
-              
-                    <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="card" style="width: 25rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Bars and Restaraunts</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Drinks and food we found!</h6>
-                                <p class="card-text">Some quick text from what will be returned from out API</p>
-                                <a href="#" class="card-link">Card link</a>
-                            </div>
-                        </div>
+                <div class="col-md-12"></div>
+                <div class="card" style="width: 25rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Bars and Restaraunts</h5>
+                        <h6 class="card-subtitle mb-2 text-muted" id="displayRest">Drinks and food we found!</h6>
+                        <p class="card-text" id="card-food"></p>
                     </div>
             </div>
         </div>
@@ -149,7 +152,7 @@
 </div>
     <br><br>
     <footer>
-        &copy;2018 Footer
+        &copy;2019 Footer
     </footer>
 
 
