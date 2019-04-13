@@ -4,9 +4,9 @@ body{
 }
 
 .jumbotron{
-    background-image: url("../assets/img/newBackground.png");
+    /* background-image: url("../assets/img/newBackground.png");
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
 }
 
 .jumbotron,h1{
@@ -64,5 +64,20 @@ cursor: pointer;
 .card{
     margin-right:  10%;
    margin-left: 1%;
+   color: #666;
 
 }
+
+.parallax {
+    /* The image used */
+    background-image: url("../assets/img/handsbackground-cropped-1080x675.png");
+  
+    /* Set a specific height */
+    min-height: 500px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
