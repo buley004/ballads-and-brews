@@ -1,45 +1,87 @@
-body{
+html {
+    scroll-behavior: smooth;
+}
+
+body {
     background: rgb(37, 12, 12);
     color: whitesmoke;
 }
 
-.jumbotron{
+#navbar {
+    background-color: #333;
+    /* Black background color */
+    position: fixed;
+    /* Make it stick/fixed */
+    top: 0;
+    /* Stay on top */
+    width: 100%;
+    /* Full width */
+    transition: top 0.3s;
+    /* Transition effect when sliding down (and up) */
+}
+
+/* Style the navbar links */
+
+#navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.jumbotron {
     /* background-image: url("../assets/img/newBackground.png");
     background-size: cover;
     background-repeat: no-repeat; */
 }
 
-.jumbotron,h1{
+.parallax {
+    /* The image used */
+    background-image: url("../assets/img/handsbackground-cropped-1080x675.png");
+    /* Set a specific height */
+    min-height: 500px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jumbotron, h1 {
     text-align: right;
     margin-bottom: 20px;
 }
 
-.jumbotron,p{
+.jumbotron, p {
     text-align: left;
     color: black;
 }
 
-label{
+label {
     color: whitesmoke;
 }
 
-.music{
+.music {
     margin-left: 32%;
 }
 
-.form-control{
+.form-control {
     background-color: rgb(41, 35, 35);
     color: whitesmoke;
-   
 }
 
-
-h6{
-text-align: center;
-
+h6 {
+    text-align: center;
 }
 
-#submitBTN{
+#submitBTN {
     height: 205px;
     width: 205px;
     margin-left: 41%;
@@ -47,9 +89,9 @@ text-align: center;
     box-shadow: 0 9px #999;
 }
 
-#submitBTN:hover{
-box-shadow: 5px,5px,5px,0px;
-cursor: pointer;
+#submitBTN:hover {
+    box-shadow: 5px, 5px, 5px, 0px;
+    cursor: pointer;
 }
 
 #submitBTN:active {
@@ -57,27 +99,23 @@ cursor: pointer;
     transform: translateY(4px);
 }
 
-
-.container{
-    background-color:  rgb(41, 35, 35);
-}
-.card{
-    margin-right:  10%;
-   margin-left: 1%;
-   color: #666;
-
+.container {
+    background-color: rgb(41, 35, 35);
 }
 
-.parallax {
-    /* The image used */
-    background-image: url("../assets/img/handsbackground-cropped-1080x675.png");
-  
-    /* Set a specific height */
-    min-height: 500px; 
-  
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+.card {
+    margin-right: 10%;
+    margin-left: 1%;
+    color: #666;
+}
+
+footer {
+    background-color: #333;
+    /* Black background color */
+    position: fixed;
+    /* Make it stick/fixed */
+    bottom: 0;
+    width: 100%;
+    /* Full width */
+    text-align: center;
+}
