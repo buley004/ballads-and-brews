@@ -1,6 +1,6 @@
 var eventKey = 'ZAZTJGCB3OHOQ3RBOEAC';
-var eventAddress = $('#exampleFormControlInput1').val();
-var eventUrl = 'https://www.eventbriteapi.com/v3/subcategories/?token=' + eventKey + '&id=103&location.address=' + eventAddress;
+var eventAddress;
+var eventUrl = 'https://www.eventbriteapi.com/v3/events/search/?token=' + eventKey;
 var selectedGenres = [];
 
 $(document).ready(function () {
@@ -26,6 +26,28 @@ $('#music-types').submit(function () {
         selectedGenres.push($(this).attr('data-sub'));
     });
     console.log(selectedGenres);
+
+    //combine array into a string and add to API query URL
+    var subIds = selectedGenres.join();
+    console.log(subIds);
+
+    console.log(eventUrl + '&subcategories=' + subIds);
+
+    var location = $('#location').val();
+
+    var testUrl = eventUrl + '&subcategories=' + subIds + '&location.address=' + location;
+
+    console.log(testUrl);
+
+    $.ajax({
+        url: testUrl,
+        method: 'GET'
+    }).then(function(response) {
+        console.log(response);
+        
+    })
+    
+    
     
 
 });
