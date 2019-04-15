@@ -45,11 +45,11 @@ $('#submitBTN').on('click', function () {
     for (let i = 0; i < response.events.length; i++) {
 
       var concertDiv = $('<div>');
-      var eventName = $('<div>')
-      var eventA = $(`<a href="${response.events[i].url}">${response.events[i].name.text}</a>`)
-      eventName.append(eventA)
+      var eventName = $('<div>');
+      var eventA = $(`<a href="${response.events[i].url}">${response.events[i].name.text}</a>`).addClass("conLink");
+      eventName.append(eventA);
 
-      var venue = $(`<p>${response.events[i].venue.name}</p>`)
+      var venue = $(`<p>${response.events[i].venue.name}</p>`);
       concertDiv.append(eventName).append(venue);
 
       //add div
@@ -94,19 +94,19 @@ $("#submitBTN").on("click", function () {
       method: "GET"
     }).then(function (response) {
 
-      console.log(response);
-
+      // for loop printing link to restaurants from Zomato
       for (var i = 0; i < response.restaurants.length; i++) {
 
         var foodDiv = $('<div>');
         var rest = $('<div>')
-        var restA = $(`<a href="${response.restaurants[i].restaurant.menu_url}">${response.restaurants[i].restaurant.name}</a>`)
+        var restA = $(`<a href="${response.restaurants[i].restaurant.menu_url}">${response.restaurants[i].restaurant.name}</a>`).addClass("foodLink");
         rest.append(restA)
 
-        var restaurantA = $(`<p>${response.restaurants[i].restaurant.name}</p>`)
-        foodDiv.append(rest).append(restaurantA);
+        // appending link to HTML
+        foodDiv.append(rest);
         $("#card-food").append(foodDiv);
 
+        // clearing HTML text
         $("#displayRest").text("");
       };
 
