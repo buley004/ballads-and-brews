@@ -1,5 +1,7 @@
 var lat;
 var long;
+var latCon;
+var longCon;
 var restCode;
 var eventKey = 'ZAZTJGCB3OHOQ3RBOEAC';
 var eventAddress;
@@ -18,8 +20,6 @@ window.onscroll = function () {
 }
 
 $('#submitBTN').on('click', function () {
-
-  console.log('sup');
 
   //function to get subgenre ids from checkboxes and pass to eventbrite api
   event.preventDefault();
@@ -42,6 +42,8 @@ $('#submitBTN').on('click', function () {
     method: 'GET'
   }).then(function (response) {
 
+    console.log(response);
+
     for (let i = 0; i < response.events.length; i++) {
 
       var concertDiv = $('<div>');
@@ -56,10 +58,16 @@ $('#submitBTN').on('click', function () {
       $('#concerts-display').append(concertDiv);
       // clearing display text
       $("#displayCon").text("");
+
+      latCon = response.events[i].venue.address.latitude;
+      console.log(latCon);
+      
+      longCon = response.events[i].venue.address.longitude;
+      console.log(longCon);
+      
     }
   })
 });
-
 
 // when clicking submit picture, run this API call
 $("#submitBTN").on("click", function () {
@@ -77,16 +85,13 @@ $("#submitBTN").on("click", function () {
     method: "GET"
   }).then(function (response) {
 
-    // all data for city
-    console.log(response);
-
     // grabbing latitude for city
     lat = response.location_suggestions[0].latitude;
 
     // grabbing longitude for city
     long = response.location_suggestions[0].longitude;
 
-    var queryURL2 = "https://developers.zomato.com/api/v2.1/search?lat=" + lat + "&lon=" + long + "&apikey=eb5059d5e18e77588ecf8134ad1603c4";
+    var queryURL2 = "https://developers.zomato.com/api/v2.1/search?count=8&lat=" + lat + "&lon=" + long + "&apikey=eb5059d5e18e77588ecf8134ad1603c4";
 
     // ajax call for finding restaurant code based off of lat and long
     $.ajax({
