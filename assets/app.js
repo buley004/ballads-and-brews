@@ -45,32 +45,34 @@ $('#submitBTN').on('click', function () {
     console.log(response);
 
     for (let i = 0; i < response.events.length; i++) {
-
+      console.log('loop');
       var concertDiv = $('<div>');
       var eventName = $('<div>');
       var eventA = $(`<a href="${response.events[i].url}">${response.events[i].name.text}</a>`).addClass("conLink");
       eventName.append(eventA);
+      
+            latCon = response.events[i].venue.latitude;
+            console.log(latCon);
+            
+            longCon = response.events[i].venue.longitude;
+            console.log(longCon);
+
+      var selectButton = $('<button>').attr('data-lat', latCon).attr('data-long', longCon).text("Show me food!").attr("Class", "choose-show");
 
       var venue = $(`<p>${response.events[i].venue.name}</p>`);
-      concertDiv.append(eventName).append(venue);
+      concertDiv.append(eventName).append(venue).append(selectButton);
 
       //add div
       $('#concerts-display').append(concertDiv);
       // clearing display text
       $("#displayCon").text("");
-
-      latCon = response.events[i].venue.address.latitude;
-      console.log(latCon);
-      
-      longCon = response.events[i].venue.address.longitude;
-      console.log(longCon);
       
     }
   })
 });
 
-// when clicking submit picture, run this API call
-$("#submitBTN").on("click", function () {
+$(document).on('click', '.choose-show', function(){
+  console.log('sup');
 
   event.preventDefault();
 
@@ -85,13 +87,7 @@ $("#submitBTN").on("click", function () {
     method: "GET"
   }).then(function (response) {
 
-    // grabbing latitude for city
-    lat = response.location_suggestions[0].latitude;
-
-    // grabbing longitude for city
-    long = response.location_suggestions[0].longitude;
-
-    var queryURL2 = "https://developers.zomato.com/api/v2.1/search?count=8&lat=" + lat + "&lon=" + long + "&apikey=eb5059d5e18e77588ecf8134ad1603c4";
+    var queryURL2 = "https://developers.zomato.com/api/v2.1/search?count=8&lat=" + latCon + "&lon=" + longCon + "&apikey=eb5059d5e18e77588ecf8134ad1603c4";
 
     // ajax call for finding restaurant code based off of lat and long
     $.ajax({
@@ -117,4 +113,4 @@ $("#submitBTN").on("click", function () {
 
     });
   });
-});
+})
