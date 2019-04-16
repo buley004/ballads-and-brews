@@ -67,9 +67,9 @@ $('#submitBTN').on('click', function () {
             longCon = response.events[i].venue.longitude;
             console.log(longCon);
 
-      var selectButton = $('<button>').attr('data-lat', latCon).attr('data-long', longCon).text("Show me food!").attr("Class", "choose-show");
+      var selectButton = $('<button>').attr('data-lat', latCon).attr('data-long', longCon).text("Show me food!").addClass("choose-show");
 
-      var venue = $(`<p>${response.events[i].venue.name}</p>`);
+      var venue = $(`<p>${response.events[i].venue.name}</p>`).addClass("venueCon");
       concertDiv.append(eventName).append(venue).append(selectButton);
 
       //add div
@@ -104,6 +104,9 @@ $(document).on('click', '.choose-show', function(){
       url: queryURL2,
       method: "GET"
     }).then(function (response) {
+
+      console.log(response);
+      
 
       // for loop printing link to restaurants from Zomato
       for (var i = 0; i < response.restaurants.length; i++) {

@@ -15,7 +15,7 @@ nav{
 }
 /* top navbar */
 #navbar {
-    background-color: #333;
+    background-color: rgb(0, 0, 0);
     /* Black background color */
     position: fixed;
     /* Make it stick/fixed */
@@ -172,12 +172,33 @@ h6 {
     margin: 10px;
 }
 
-/* zomato restaurant links*/
+/* location of venue */
+.venueCon {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+/* "Show me food!" */
+.choose-show {
+   color: black;
+   background-color: white;
+   font-size: 15px;
+   margin-bottom: 25px;
+   font-family: Arial, Helvetica, sans-serif;
+   font-style: italic;
+}
+
+/* zomato restaurant links */
 a.foodLink {
     text-decoration: none;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
   }
+
+  /* zomato restaurant links on hover */
+a.foodLink:hover {
+    cursor: pointer;
+    color: red;
+}
 
 /* concert links*/
 a.conLink {
