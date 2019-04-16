@@ -8,16 +8,16 @@ var eventAddress;
 var eventUrl = 'https://www.eventbriteapi.com/v3/events/search/?start_date.keyword=today&expand=venue&token=' + eventKey;
 var selectedGenres = [];
 
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-50px";
-  }
-  prevScrollpos = currentScrollPos;
-}
+// var prevScrollpos = window.pageYOffset;
+// window.onscroll = function () {
+//   var currentScrollPos = window.pageYOffset;
+//   if (prevScrollpos > currentScrollPos) {
+//     document.getElementById("navbar").style.top = "0";
+//   } else {
+//     document.getElementById("navbar").style.top = "-50px";
+//   }
+//   prevScrollpos = currentScrollPos;
+// }
 
 $('#submitBTN').on('click', function () {
 
@@ -67,9 +67,9 @@ $('#submitBTN').on('click', function () {
             longCon = response.events[i].venue.longitude;
             console.log(longCon);
 
-      var selectButton = $('<button>').attr('data-lat', latCon).attr('data-long', longCon).text("Show me food!").attr("Class", "choose-show");
+      var selectButton = $('<button>').attr('data-lat', latCon).attr('data-long', longCon).text("Show me food!").addClass("choose-show");
 
-      var venue = $(`<p>${response.events[i].venue.name}</p>`);
+      var venue = $(`<p>${response.events[i].venue.name}</p>`).addClass("venueCon");
       concertDiv.append(eventName).append(venue).append(selectButton);
 
       //add div
