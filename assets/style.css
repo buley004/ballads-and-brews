@@ -77,6 +77,11 @@ label {
     color: whitesmoke;
 }
 
+#error-message{
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 #location {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -85,6 +90,10 @@ label {
     margin-left: 28%;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+#music {
+    font-family: "Arbutus";
 }
 
 .music h3 {
