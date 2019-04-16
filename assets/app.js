@@ -105,6 +105,9 @@ $(document).on('click', '.choose-show', function(){
       method: "GET"
     }).then(function (response) {
 
+      console.log(response);
+      
+
       // for loop printing link to restaurants from Zomato
       for (var i = 0; i < response.restaurants.length; i++) {
 
