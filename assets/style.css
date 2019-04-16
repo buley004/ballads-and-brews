@@ -6,6 +6,8 @@ body {
     background-image: url("../assets/img/light_honeycomb.png");
     background-repeat: repeat;
     color: whitesmoke;
+    font-family: 'Arbutus';
+    font-size: 22px;
 }
 
 /* top navbar */
@@ -41,7 +43,7 @@ body {
 
 /* What's your plan for the night? and Let's go to a show and get some grub. */
 .lead {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* top image */
@@ -75,29 +77,33 @@ label {
     color: whitesmoke;
 }
 
-/* location search box font */
 #location {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* music checkbox form */
 .music {
-    margin-left: 32%;
+    margin-left: 28%;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.music h3 {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .form-control {
-    background-color: rgb(41, 35, 35);
+    background-color: #333;
     color: whitesmoke;
 }
 
 /* check box font */
 .col-md-2 {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h6 {
     text-align: center;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #submitBTN {
@@ -126,14 +132,14 @@ h6 {
 
 /* concert and restaurant display cards */
 .card {
-    margin: 0 auto; 
-    float: none; 
+    margin: 0 auto;
+    float: none;
     margin-bottom: 20px;
 }
 
 /* concert and restaurant display cards */
 .card-body {
-    background-color: rgba(255, 255, 255, 0.37);   
+    background-color: rgba(255, 255, 255, 0.37);
     opacity: 0.5;
     filter: alpha(opacity=50);
 }
@@ -157,14 +163,14 @@ h6 {
 a.foodLink {
     text-decoration: none;
     color: black;
-    font-family: 'Times New Roman', Times, serif
+    font-family: Arial, Helvetica, sans-serif;
   }
 
 /* concert links*/
 a.conLink {
     color: black;
     text-decoration: none;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 footer {

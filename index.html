@@ -8,15 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
     <link rel="stylesheet" type="text/css" media="screen" href="assets/style.css">
 </head>
 <link href='https://fonts.googleapis.com/css?family=Arbutus' rel='stylesheet'>
-<style>
-body {
-    font-family: 'Arbutus';font-size: 22px;
-}
-</style>
 
 <body>
     <!-- nav bar -->
@@ -49,63 +43,56 @@ body {
                         </label>
                         <input type="text" class="form-control" id="location" placeholder="Where you at?">
                     </div>
-
                     <br>
                     <br>
                     <br>
-
                     <div class="container">
                         <div class="music">
                             <h3 id="music">Music</h3>
                             <!-- music genre needed from user -->
-
                             <form action="/action_page.php" class="checkboxes">
                                 <div class="row">
-
-                                    <div class="col-md-2">
+                                    <div class="col-md-3">
                                         <input type="checkbox" name="genre" data-sub="3001" value="alt"> Alternative<br>
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-md-3">
                                         <input type="checkbox" name="genre" data-sub="3002" value="blues"> Blues<br>
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-md-3">
                                         <input type="checkbox" name="genre" data-sub="3003" value="classical">
                                         Classical<br>
                                     </div>
                                 </div>
-
                                 <div class="row">
-                                    <div class="col-md-2">
+                                    <div class="col-md-3">
                                         <input type="checkbox" name="genre" data-sub="3004" value="country"> Country<br>
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-md-3">
                                         <input type="checkbox" name="genre" data-sub="3013" value="pop"> Pop<br>
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-md-3">
                                         <input type="checkbox" name="genre" data-sub="3006" value="edm"> EDM<br>
                                     </div>
                                 </div>
-
                                 <div class="row">
-                                    <div class="col-md-2">
+                                    <div class="col-md-3">
                                         <input type="checkbox" name="genre" data-sub="3007" value="folk"> Folk<br>
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-md-3">
                                         <input type="checkbox" name="genre" data-sub="3008" value="hip-hop"> Hip-Hop<br>
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-md-3">
                                         <input type="checkbox" name="genre" data-sub="3009" value="indie"> Indie<br>
                                     </div>
                                 </div>
-
                                 <div class="row">
-                                    <div class="col-md-2">
+                                    <div class="col-md-3">
                                         <input type="checkbox" name="genre" data-sub="3011" value="metal"> Metal<br>
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-md-3">
                                         <input type="checkbox" name="genre" data-sub="3017" value="rock"> Rock<br>
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-md-3">
                                         <input type="checkbox" name="genre" data-sub="3015" value="reggae"> Reggae<br>
                                     </div>
                                 </div>
@@ -114,51 +101,48 @@ body {
             </div>
         </div>
         </form>
-
         <br>
         <br>
-
         <div id="section-3">
             <h6>Click to get your results:</h6>
             <br>
             <img id="submitBTN" src="../Group-Project/assets/img/BandBrew (1).png" alt="beer and music note image">
         </div>
+        <br>
+        <br>
+        <br>
 
-        <br>
-        <br>
-        <br>
-        
         <div class="container">
-            <div class="row">
-                <div class="col-md-12"></div>
-                <div class="card" style="width: 25rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Concerts</h5>
-                        <h6 class="card-subtitle mb-2 text-muted" id="displayCon">Concerts we found!</h6>
-                        <p class="card-text" id="concerts-display"></p>
+            <div id="section-4">
+                <div class="row">
+                    <div class="col-md-12"></div>
+                    <div class="card" style="width: 25rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Concerts</h5>
+                            <h6 class="card-subtitle mb-2 text-muted" id="displayCon">Concerts we found!</h6>
+                            <p class="card-text" id="concerts-display"></p>
+                        </div>
+                    </div>
+                    <div class="col-md-12"></div>
+                    <div class="card" style="width: 25rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Bars and Restaraunts</h5>
+                            <h6 class="card-subtitle mb-2 text-muted" id="displayRest">Drinks and food we found!</h6>
+                            <p class="card-text" id="card-food"></p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-12"></div>
-                <div class="card" style="width: 25rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Bars and Restaraunts</h5>
-                        <h6 class="card-subtitle mb-2 text-muted" id="displayRest">Drinks and food we found!</h6>
-                        <p class="card-text" id="card-food"></p>
-                    </div>
             </div>
         </div>
+        <br><br><br>
     </div>
-    <br><br><br>
-</div>
+    </div>
     <br><br>
     <footer>
-        &copy;2019 Footer
+        &copy;2019
     </footer>
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/app.js"></script>
-
 </body>
 
 </html>
