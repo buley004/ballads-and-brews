@@ -2,11 +2,7 @@ html {
     scroll-behavior: smooth;
 }
 
-<<<<<<< HEAD
-body {
-=======
 body {  
->>>>>>> origin/master
     background-image: url("../assets/img/light_honeycomb.png");
     background-repeat: repeat;
     color: whitesmoke;
@@ -45,14 +41,10 @@ body {
     color: black;
 }
 
-<<<<<<< HEAD
-.jumbotron {}
-=======
 /* What's your plan for the night? and Let's go to a show and get some grub. */
 .lead {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
->>>>>>> origin/master
 
 /* top image */
 .parallax {
@@ -85,19 +77,10 @@ label {
     color: whitesmoke;
 }
 
-<<<<<<< HEAD
 #location {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-=======
-/* location search box font */
-#location {
-    font-family: 'Times New Roman', Times, serif;
-}
-
-/* music checkbox form */
->>>>>>> origin/master
 .music {
     margin-left: 28%;
     font-size: 20px;
@@ -105,7 +88,7 @@ label {
 }
 
 .music h3 {
-    font-family: 'Arbutus';
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .form-control {
@@ -115,12 +98,12 @@ label {
 
 /* check box font */
 .col-md-2 {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h6 {
     text-align: center;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #submitBTN {
@@ -147,12 +130,7 @@ h6 {
     background-repeat: repeat;
 }
 
-<<<<<<< HEAD
-/* concert and restaurant display cards*/
-
-=======
 /* concert and restaurant display cards */
->>>>>>> origin/master
 .card {
     margin: 0 auto;
     float: none;
@@ -181,27 +159,18 @@ h6 {
     margin: 10px;
 }
 
-<<<<<<< HEAD
-#displayCon {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-#displayRest {
-    font-family: Arial, Helvetica, sans-serif;
-=======
 /* zomato restaurant links*/
 a.foodLink {
     text-decoration: none;
     color: black;
-    font-family: 'Times New Roman', Times, serif
+    font-family: Arial, Helvetica, sans-serif;
   }
 
 /* concert links*/
 a.conLink {
     color: black;
     text-decoration: none;
-    font-family: 'Times New Roman', Times, serif;
->>>>>>> origin/master
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 footer {
