@@ -24,6 +24,16 @@ $('#submitBTN').on('click', function () {
   //function to get subgenre ids from checkboxes and pass to eventbrite api
   event.preventDefault();
 
+  //check if location is filled out
+  if (validate.isEmpty($('#location').val())) {
+    console.log('empty');
+    $('#error-message').text("Please fill out this field.");
+    return false;  
+  }
+
+  //remove error message text if location is filled out
+  $('#error-message').text("");
+
   //add checked genres to an array with eventbrite subgenres
   $.each($("input[name='genre']:checked"), function () {
     selectedGenres.push($(this).attr('data-sub'));
@@ -114,3 +124,8 @@ $(document).on('click', '.choose-show', function(){
     });
   });
 })
+
+//prevent page reload on form submit
+$('#music-types').submit(function(){
+  event.preventDefault();
+});
