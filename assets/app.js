@@ -1,5 +1,7 @@
 var lat;
 var long;
+var latCon;
+var longCon;
 var restCode;
 var eventKey = 'ZAZTJGCB3OHOQ3RBOEAC';
 var eventAddress;
@@ -18,8 +20,6 @@ window.onscroll = function () {
 }
 
 $('#submitBTN').on('click', function () {
-
-  console.log('sup');
 
   //function to get subgenre ids from checkboxes and pass to eventbrite api
   event.preventDefault();
@@ -42,24 +42,32 @@ $('#submitBTN').on('click', function () {
     method: 'GET'
   }).then(function (response) {
 
+    console.log(response);
+
     for (let i = 0; i < response.events.length; i++) {
 
       var concertDiv = $('<div>');
-      var eventName = $('<div>')
-      var eventA = $(`<a href="${response.events[i].url}">${response.events[i].name.text}</a>`)
-      eventName.append(eventA)
+      var eventName = $('<div>');
+      var eventA = $(`<a href="${response.events[i].url}">${response.events[i].name.text}</a>`).addClass("conLink");
+      eventName.append(eventA);
 
-      var venue = $(`<p>${response.events[i].venue.name}</p>`)
+      var venue = $(`<p>${response.events[i].venue.name}</p>`);
       concertDiv.append(eventName).append(venue);
 
       //add div
       $('#concerts-display').append(concertDiv);
       // clearing display text
       $("#displayCon").text("");
+
+      latCon = response.events[i].venue.address.latitude;
+      console.log(latCon);
+      
+      longCon = response.events[i].venue.address.longitude;
+      console.log(longCon);
+      
     }
   })
 });
-
 
 // when clicking submit picture, run this API call
 $("#submitBTN").on("click", function () {
@@ -77,16 +85,13 @@ $("#submitBTN").on("click", function () {
     method: "GET"
   }).then(function (response) {
 
-    // all data for city
-    console.log(response);
-
     // grabbing latitude for city
     lat = response.location_suggestions[0].latitude;
 
     // grabbing longitude for city
     long = response.location_suggestions[0].longitude;
 
-    var queryURL2 = "https://developers.zomato.com/api/v2.1/search?lat=" + lat + "&lon=" + long + "&apikey=eb5059d5e18e77588ecf8134ad1603c4";
+    var queryURL2 = "https://developers.zomato.com/api/v2.1/search?count=8&lat=" + lat + "&lon=" + long + "&apikey=eb5059d5e18e77588ecf8134ad1603c4";
 
     // ajax call for finding restaurant code based off of lat and long
     $.ajax({
@@ -94,19 +99,19 @@ $("#submitBTN").on("click", function () {
       method: "GET"
     }).then(function (response) {
 
-      console.log(response);
-
+      // for loop printing link to restaurants from Zomato
       for (var i = 0; i < response.restaurants.length; i++) {
 
         var foodDiv = $('<div>');
         var rest = $('<div>')
-        var restA = $(`<a href="${response.restaurants[i].restaurant.menu_url}">${response.restaurants[i].restaurant.name}</a>`)
+        var restA = $(`<a href="${response.restaurants[i].restaurant.menu_url}">${response.restaurants[i].restaurant.name}</a>`).addClass("foodLink");
         rest.append(restA)
 
-        var restaurantA = $(`<p>${response.restaurants[i].restaurant.name}</p>`)
-        foodDiv.append(rest).append(restaurantA);
+        // appending link to HTML
+        foodDiv.append(rest);
         $("#card-food").append(foodDiv);
 
+        // clearing HTML text
         $("#displayRest").text("");
       };
 
