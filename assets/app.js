@@ -69,7 +69,7 @@ $('#submitBTN').on('click', function () {
 
       var selectButton = $('<button>').attr('data-lat', latCon).attr('data-long', longCon).text("Show me food!").addClass("choose-show");
 
-      var venue = $(`<p>${response.events[i].venue.name}</p>`);
+      var venue = $(`<p>${response.events[i].venue.name}</p>`).addClass("venueCon");
       concertDiv.append(eventName).append(venue).append(selectButton);
 
       //add div
