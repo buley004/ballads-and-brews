@@ -5,7 +5,7 @@ var longCon;
 var restCode;
 var eventKey = 'ZAZTJGCB3OHOQ3RBOEAC';
 var eventAddress;
-var eventUrl = 'https://www.eventbriteapi.com/v3/events/search/?categories=103&start_date.keyword=today&expand=venue&token=' + eventKey;
+var eventUrl = 'https://www.eventbriteapi.com/v3/events/search/?categories=103&start_date.keyword=this_week&expand=venue&token=' + eventKey;
 var selectedGenres = [];
 
 var prevScrollpos = window.pageYOffset;
@@ -27,6 +27,7 @@ $('#submitBTN').on('click', function () {
   //empty concerts and food in case previously populated
   $('#concerts-display').empty();
   $("#card-food").empty();
+  selectedGenres = [];
 
   //check if location is filled out
   if (validate.isEmpty($('#location').val())) {
@@ -79,7 +80,7 @@ $('#submitBTN').on('click', function () {
 
       var selectButton = $('<button>').attr('data-lat', latCon).attr('data-long', longCon).text("Show me food!").addClass("choose-show").attr("href", "#section-5");
 
-      var venue = $(`<p>${response.events[i].venue.name}</p>`);
+      var venue = $(`<p>${response.events[i].venue.name}</p>`).addClass("venueCon");
       concertDiv.append(eventName).append(venue).append(selectButton);
 
       //add div
